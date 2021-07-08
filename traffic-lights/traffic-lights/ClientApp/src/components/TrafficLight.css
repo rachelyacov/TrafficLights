@@ -1,0 +1,33 @@
+.flex-container {
+    display: flex;
+    background-color:#888;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    border:solid 2px#666;
+}
+  
+  .flex-container > div {
+    margin: 4px 0px;
+    border-radius: 50px;
+    width :80px;
+    height: 80px;
+  }
+
+    
+  .flex-container > div.TurnedOff {
+    background-color: lightgray;
+
+  }
+  .flex-container > div.Red {
+    background-color: 	#FF0000;
+
+  }
+  .flex-container > div.Green {
+    background-color: #1FEA00
+
+  }
+  .flex-container > div.Yellow {
+    background-color: #FFFF00
+
+  }
