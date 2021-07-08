@@ -1,13 +1,13 @@
 
-export const getdefault =async () => {    
+export const getDefault =async () => {    
     const response = await fetch('/api/getdefault');
     return await response.json();
 }
 
 
-export const GetCircle =async (_color) => {
-    const data = { 'color': _color };
-    const response = await fetch('/api/GetCircle', {
+export const getCircle =async (color) => {
+    const data = { 'color': color };
+    const response = await fetch('/api/getcircle', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './TrafficLight.css';
-import { getdefault, GetCircle } from '../services/LightService.js'
+import { getDefault, getCircle } from '../services/LightService.js'
 
 export class Layout extends Component {
 
@@ -13,7 +13,7 @@ export class Layout extends Component {
 
   changeColor = async (color, time) => {
     setTimeout(async () => {
-      const circle = await GetCircle(color)
+      const circle = await getCircle(color)
       this.setState({ color: circle.color })
       this.changeColor(circle.color, circle.time);
     }, time * 1000);
@@ -21,7 +21,7 @@ export class Layout extends Component {
   }
 
   init = async () => {
-    const defult = await getdefault()
+    const defult = await getDefault()
     this.setState({ color: defult.color })
     this.changeColor(defult.color, defult.time);
   }
