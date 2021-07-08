@@ -22,15 +22,15 @@ namespace traffic_lights.Controllers
         }
 
         [HttpGet]
-        [Route("api/getdefault")]
-        public Models.CircleModel getdefault()
+        [Route("lights/get_default")]
+        public Models.CircleModel GetDefault()
         {
             return repository.GetDefault();
         }
 
 
         [HttpPost]
-        [Route("api/GetCircle")]
+        [Route("lights/get_circle")]
         [Consumes("application/json")]
         public Models.CircleModel GetCircle(Models.GetRequestCircle request)
         {
